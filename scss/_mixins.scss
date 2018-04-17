@@ -1,0 +1,95 @@
+
+@import "variables";
+/************************
+     Mixins
+***************************/
+
+
+@mixin arrow-bottom{
+  content: '';
+  border: 1px solid $base-light;
+  position: absolute;
+  width: 1px;
+  @content;
+}
+
+@mixin arrow-horizontal{
+  content: '';
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  left: 259px;
+  bottom: 252px;
+  border: 1px solid $arrow-grey;
+
+}
+
+
+
+
+@mixin arrow-horizontal-green{
+  content: '';
+  background-image: url("https://cdn.involvio.com/assets/marketing/line-bottom-1a2d621f509aae431e79753a33863842.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 47px;
+  left: -33px;
+  width: 100%;
+  height: 255px;
+  z-index: 1000;
+  @content;
+}
+
+
+@mixin circle-green{
+  content: '1';
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  border: 2px solid #6bbe98;
+  border-radius: 50%;
+  left:-54px;
+  text-align: center;
+  padding: 9px;
+  top: -10px;
+  color: #6bbe98;
+  @content;
+}
+
+
+
+@mixin h4{
+  font-weight: 100;
+  font-size: 26px;
+  color: $h4-title;
+  margin-bottom: 25px;
+  @content;
+}
+
+
+@mixin p{
+  color: $base-color;
+  font-weight: 200;
+  margin-bottom: 30px;
+  @content;
+}
+
+
+@mixin btn-green{
+  border: 2px solid #6bbb97;
+  background-color: transparent;
+  color: #6bbe98;
+  padding: .420rem 1.40rem;
+  font-weight: 100;
+  @content;
+}
+
+
+@mixin btn-grey{
+  border: 2px solid #CFD3D3;
+  background-color: transparent;
+  color: #CFD3D3;
+  padding: .420rem 1.40rem;
+  font-weight: 100;
+  @content;
+}
