@@ -1,0 +1,17 @@
+
+
+// Color Functions
+
+
+// $base: $font-grey;
+// $base-dark: darken($base, 25%);
+// $base-light: lighten($base, 25%);
+
+$p-color: #7E8A93; // darker grey for the text to stand out
+$base: #3d4044;
+$base-light: #83878c;
+$base-dark: #57595E;
+$complement: complement($base);
+// $arrow-dark: lighten($base, 0%);
+
+$p-dark: #575a5f;
