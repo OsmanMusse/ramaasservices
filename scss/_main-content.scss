@@ -1,0 +1,1105 @@
+@import 'style';
+@import 'color-functions';
+@import 'mixins';
+@import 'buttons';
+@import 'variables';
+@import 'mediaqueries';
+
+
+
+
+/*************************
+     Jumbotron Section
+**************************/
+
+
+.jumbotron{
+text-align: center;
+padding: 100px 10px !important;
+
+.school-year{
+  font-size: 29px;
+  font-weight: 100;
+}
+
+} // Closing jumbotron
+
+
+
+
+/*************************
+     Caring Section
+**************************/
+.caring-section{
+  background-color: $background-grey;
+  text-align: center;
+  // color: $color-primary;
+  color: $base;
+
+  h1{
+    font-weight: 300;
+    font-size: 26px;
+    margin-bottom: 20px;
+   color: $base-dark;
+  }
+
+ p{
+   // color: $font-grey;
+   font-weight: 100;
+   width: 100%;
+   color: #7E8A93;
+
+  }
+
+  img{
+    margin-bottom: 20px;
+  }
+
+  @media(min-width: $breakpoint-tablet-md) {
+
+     padding: 24px 24px 60px 24px !important;
+
+
+
+
+
+    .container{
+      // border: 2px solid red;
+      max-width: 696px;
+    }
+
+    h1{
+      font-size: 38px;
+      font-weight: 100 !important;
+    }
+
+    p{
+      font-size:18px;
+
+    }
+
+    .thumbnails{
+
+
+
+      .student-type{
+        text-align: left;
+
+
+
+        &::before{
+         content: '';
+         background-image: url("https://cdn.involvio.com/assets/marketing/line-tl-4e2dac8d294c1510e8ed82ec05ad721d.svg");
+         width: 35%;
+         height: 35%;
+         position: absolute;
+         left: 130px;
+         top: 55px;
+         background-repeat: no-repeat;
+        }
+
+        p{
+        margin: 0;
+        width: 50%;
+        font-size: 19px;
+        }
+
+
+
+
+
+      } // Closing student type
+
+      .student-type-1{
+        padding-left: 25px;
+        padding-right: 25px;
+        text-align: right;
+
+        &::before{
+         content: '';
+         background-image: url("https://cdn.involvio.com/assets/marketing/line-tr-9a1ccce65f6b1e48c99db65e58d8c993.svg");
+         width: 35%;
+         height: 35%;
+         position: absolute;
+         left: 88px;
+         top: 56px;
+         background-repeat: no-repeat;
+        }
+
+
+        p{
+          width: 41%;
+          margin: 0 0 0 auto;
+          max-width: 330px;
+          font-size: 19px;
+        }
+
+      } // Closing student type 1
+
+    }
+
+
+
+    .student-type-2{
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-top: -150px;
+
+
+
+    } // Closing student type 2
+
+
+    .student-type-3{
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-top: -30px !important;
+        text-align: left;
+
+
+         p{
+           margin: 0 !important;
+           text-align: left;
+         }
+
+         &::before{
+           content: '';
+           background-image: url("https://cdn.involvio.com/assets/marketing/line-bl-4f16371b7d22cfa8356317786797d927.svg");
+           width: 35%;
+           height: 35%;
+           position: absolute;
+           left: 140px;
+           top: 18px;
+           background-repeat: no-repeat;
+         }
+    }
+
+
+
+    .student-type-4{
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-top: -30px !important;
+        text-align: right;
+
+
+         p{
+             margin: 0 0 0 auto !important;
+         }
+
+         &::before{
+           content: '';
+           background-image: url("https://cdn.involvio.com/assets/marketing/line-br-04645a34e1a501ccbc3dea5ff7ed6786.svg");
+           width: 35%;
+           height: 35%;
+           position: absolute;
+           left: 48px;
+           top: 17px;
+           background-repeat: no-repeat;
+         }
+    }
+
+
+
+
+
+
+  } // End of Tablet Breakpoint
+
+
+
+
+
+
+
+  // Row of the images starts
+  .thumbnails{
+    margin-top: 40px;
+
+  .arrow-bottom::after{
+   @include arrow-bottom;
+    height: 13%;
+  }
+
+
+  .arrow-bottom-2::after{
+     @include arrow-bottom {
+       left: 50%;
+       top: 100%;
+       height: 9%;
+
+     }
+  }
+
+    p{
+      // color:$color-primary;
+      font-weight: 100;
+      width: 49%;
+      margin: 0 auto 20px;
+      max-width: 140px;
+      color: #7E8A93;
+    }
+
+      .img-expand{
+        margin-top: 45px;
+        width: 80%;
+
+      }
+
+
+
+
+  }
+
+
+  @media(min-width: $breakpoint-tablet-md){
+
+    .arrow-bottom::after{
+      display: none;
+    }
+
+    .arrow-bottom-2::after{
+         display: none;
+       }
+    }
+
+
+
+
+} // Closing Caring Section
+
+
+
+
+
+/*************************
+     Reference Section
+**************************/
+
+.reference-section{
+  padding: 25px 0 0 0;
+
+
+
+
+
+.reference-header{
+  margin-bottom: 80px;
+}
+    h1 {
+      font-weight: 100;
+      font-size: 27px;
+      color:$base-dark;
+      margin-bottom:0;
+    }
+
+   p{
+     color: #7E8A93;
+   }
+
+.tweet-box{
+  margin-bottom: 100px;
+}
+
+
+.fa-twitter{
+  position: absolute;
+  color: cornflowerblue;
+  right: 50px;
+}
+
+
+
+
+   .tweet-person{
+   padding: 0;
+   margin-left: 15px;
+
+
+
+
+     img{
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+     }
+
+     .person-description{
+       display: flex;
+       margin-left: 13px;
+     }
+
+
+     .person-custom{
+       margin-left: 13px;
+         text-align: left;
+         color: $base;
+       .name{
+        font-size: 14px;
+        font-weight: 300;
+        margin: 0;
+        line-height: 1.5;
+        color: $base-dark;
+
+       }
+       .title{
+          font-size: 14px;
+          margin: 0;
+          font-weight: 300;
+          color: $base-dark;
+       }
+     }
+
+   }
+
+
+
+   .tweet-column{
+     color: $base;
+     padding-left: 0;
+    padding-right: 23px;
+    margin-top: 13px;
+    text-align: left;
+    margin-left: 30px;
+
+    p{
+      color: #7E8A93;
+
+    }
+   }
+
+   @media(min-width: $breakpoint-tablet-md){
+
+
+        .tweet-box{
+          padding: 0;
+
+          .fa-twitter{
+            right: 35px;
+          }
+        }
+
+
+        .tweet-column{
+          font-weight: 300;
+        }
+
+
+   }
+
+
+
+
+   @media(min-width: $breakpoint-x-large){
+
+         padding: 80px 0 0 0;
+
+
+       .container{
+         max-width: 1300px;
+       }
+
+       h1{
+         font-size: 39px;
+         margin-bottom: 80px;
+       }
+   }
+
+} // Closing referernce Section
+
+
+
+
+/*************************
+     Success Section
+**************************/
+
+
+.success-section{
+  padding:30px 15px;
+
+
+
+  h1{
+   color: $base-dark;
+
+   text-align: center;
+   font-weight: 300;
+   font-size: 27px;
+  }
+
+  p{
+    font-weight: 100;
+    color: #7E8A93;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .col-12{
+    // border: 2px solid blue;
+  }
+
+  .features{
+   padding-left: 20px;
+   padding-right: 20px;
+
+      h4{
+      font-weight: 300;
+      color: $base;
+      text-align: center;
+      margin: 15px 0;
+      }
+
+      p{
+      font-size: 12px;
+      margin-bottom: 30px;
+      color: #7E8A93;
+      }
+
+
+      .img-agenda{
+        width: 32px;
+        display: block;
+        margin: 0 auto;
+
+      }
+
+  }
+
+  @media(min-width: $breakpoint-tablet-md){
+
+    .container{
+      padding: 0;
+    }
+
+      padding: 50px 40px 70px 40px;
+
+       h1{
+         font-size: 39px;
+       }
+
+       h4{
+         font-size: 1.0rem;
+       }
+
+       p{
+         font-size: 17px;
+       }
+
+
+
+  }
+
+
+
+
+} /** Closing Success Section **/
+
+
+
+
+
+
+/*************************
+     Sync Section
+**************************/
+
+
+.sync-section{
+  padding: 30px 25px 0 25px;
+  background-color: $background-grey;
+
+  h4{
+    font-weight: 200;
+    font-size: 26px;
+    margin-bottom: 0;
+  }
+
+  .row{
+     margin-left: 0;
+     margin-right: 0;
+  }
+
+  // Inner Section
+  .sync-contain{
+
+   p{
+    @include p;
+   }
+
+  }
+
+.img-contain{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+  .calendars{
+    margin-right: 16px;
+  }
+
+
+
+
+@media(max-width: $breakpoint-phones){
+
+
+  padding: 30px 0 0 10px;
+
+  .row{
+    flex-direction: column-reverse;
+  }
+
+  .sync-text{
+
+    h4{
+      @include h4;
+    }
+
+     p{
+       @include p{
+         font-size: 16px;
+       }
+     }
+
+    .sync-calendar{
+      margin-right: 6px;
+    }
+  }
+}
+
+  @media(min-width: $breakpoint-tablet-md){
+      padding: 0;
+
+
+       &::before{
+         content: '';
+         width: 1px;
+         height:  84.8%;
+         border: 1px solid $arrow-green;
+         position: absolute;
+         left: 52%;
+       }
+
+      .calendar-phone{
+        padding-left: 43px;
+        padding-top: 50px;
+        padding-right: 31px;
+      }
+
+
+
+
+
+  .sync-text{
+
+    margin-top: 90px;
+    margin-left: 11px;
+
+      h4{
+        color: $h4-green;
+        font-size: 36px;
+        margin-bottom: 40px;
+        padding-right: 18px;
+        padding-left: 37px
+      }
+
+        &::before{
+          content: '';
+          width: 60px;
+          height: 60px;
+          background-image: url("https://cdn.involvio.com/assets/marketing/icon-agenda-7632b18137384022b9179b01328d6953.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: $background-grey;
+          position: absolute;
+          right: 88%;
+          top: 82px;
+          border: 2px solid $h4-green;
+          border-radius: 50%;
+
+
+        }
+      }
+
+      p{
+        @include p{
+          font-size: 18px;
+        }
+        padding-right: 35px;
+        padding-left: 37px;
+
+      }
+
+
+
+
+
+} // Closing Tablet Verison
+
+
+
+
+
+
+ @media(min-width: $breakpoint-x-large){
+
+   &::before{
+     left: 50%;
+    height: 1039px;
+   }
+
+   .row{
+   max-width: 1020px;
+   margin: 0 auto;
+   }
+
+   .phone-section{
+
+    .calendar-phone{
+          padding-left: 0;
+          padding-right: 0;
+          width: 350px;
+          margin: 0 auto;
+    }
+
+   }
+
+   .sync-text{
+     margin-top: 150px;
+
+
+     &::before{
+       top: 140px;
+       right: 94%;
+     }
+
+
+     p{
+       padding: 0 41px;
+     }
+   }
+
+ }  // Closing Extra Large Tablet Verison
+
+} // Closing Sync Section
+
+
+
+/*************************
+     Prepare Section
+**************************/
+
+.prepare-section{
+  padding: 30px 25px 0 25px;
+
+
+  .prepare-contain{
+
+  padding-left: 13px;
+  padding-right: 13px;
+
+  img{
+    margin-right: 12px;
+  }
+
+  h4{
+  @include h4;
+  }
+
+  p{
+    color: #7E8A93;
+    font-weight: 100;
+  }
+  .btn{
+    border-color: $button-border;
+    background-color: transparent;
+    font-weight: 100;
+    font-size: 0.95rem;
+    border-width: 2px;
+    color: $button-color;
+    padding: .640rem .90rem;
+  }
+ .prepare-img-contain{
+   max-width: 100%;
+   margin-top: 10px;
+   margin-top: 40px;
+ }
+
+}
+
+@media(max-width: $breakpoint-phones){
+  .prepare-text{
+    .btn{
+      margin-bottom: 35px;
+    }
+  }
+}
+
+
+ @media(min-width: $breakpoint-tablet-md){
+  padding-bottom: 20px;
+  .prepare-text{
+    margin-top: 40px;
+    text-align: right;
+
+    h4{
+      font-size: 36px;
+      color: $h4-green;
+      line-height: 1.5;
+
+      &::before{
+        content: '';
+        width: 60px;
+        height: 60px;
+        border: 2px solid  $h4-green;
+        position: absolute;
+        left: 347px;
+        top: 19px;
+        border-radius: 50%;
+        background-color: white;
+      }
+    }
+
+    p{
+      font-size: 18px;
+      @include p;
+    }
+
+    .document-img{
+      width: 28px;
+       position: absolute;
+       left: 362px;
+       top: 32px;
+       position: absolute;
+       z-index: 100000;
+    }
+  }
+ }
+
+
+ @media(min-width: $breakpoint-x-large){
+
+     padding-bottom: 0;
+
+
+   .row{
+      max-width: 1020px;
+      margin: 0 auto;
+   }
+
+
+   .prepare-contain{
+     flex: 0 0 45%;
+   }
+
+   .prepare-text{
+
+     h4{
+      font-size: 41px;
+      &::before{
+        left: 466px;
+      }
+
+     }
+
+     .document-img{
+       left: 483px;
+     }
+   }
+
+   .prepare-img-contain{
+     max-width: 350px;
+     margin-left: 13.333333%;
+   }
+ }  // Closing Extra Large Tablet Verison
+
+}  // Closing Prepare Section
+
+
+
+
+
+/*************************
+     Sponsor Section
+**************************/
+
+.sponsor-section{
+  background-color: $background-grey;
+  padding: 32px 20px 20px 20px;
+
+  h4{
+    @include h4;
+  }
+
+  p{
+    color: #7E8A93;
+    font-weight: 100;
+    margin-bottom: 25px !important;
+  }
+
+  .sponsors-contain{
+    display: flex;
+
+ li{
+   margin-right: 15px;
+ }
+
+
+    img{
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+
+  @media(min-width: $breakpoint-tablet-md){
+
+   padding: 80px 0px 80px 0px;
+
+
+    h4{
+      font-size: 38px;
+      margin-bottom: 35px;
+    }
+
+    p{
+      font-size: 17px;
+    }
+
+
+    .sponsors-contain{
+       margin: 0 auto;
+       justify-content: center;
+      img{
+        width: 108px;
+        height: 108px;
+
+      }
+    }
+  }
+
+} // Closing sponsor section
+
+
+
+
+
+
+
+
+/*************************
+     Half Section
+**************************/
+
+
+
+.half-section{
+  padding-top: 110px;
+
+ .computer-contain, .three-faces-contain{
+ padding-right: 18px;
+
+
+  h4 {
+    @include h4;
+    }
+
+   p{
+    @include p;
+    }
+
+  .btn-green{
+    @include btn-green;
+  }
+
+  .computer{
+    margin-bottom: 70px;
+   }
+
+   .three-faces-img{
+     margin-bottom: 80px;
+   }
+
+  }
+
+
+
+  @media(max-width: $breakpoint-phones){
+    .container{
+      width: 88%;
+    }
+  }
+
+  @media(min-width: $breakpoint-tablet-md){
+
+     padding-bottom: 50px;
+
+
+
+    .container{
+      margin: 0;
+      padding: 0;
+    }
+
+    .row{
+      flex-direction: row-reverse;
+    }
+
+    .computer-contain{
+
+       flex: 0 0 45%;
+       padding-left: 35px;
+       padding-right: 0;
+
+      &::before{
+      content: '';
+      border: 1px solid #e2dede;
+      height: 92%;
+      position: absolute;
+      left: 0;
+    }
+     h4{
+      margin-top: 15px;
+      margin-bottom: 14px;
+      font-size: 32px;
+     }
+
+     p {
+      font-size: 15px;
+    }
+
+    .btn{
+      margin-top: 50px;
+      padding: 0.60rem 2.30rem;
+    }
+
+    }
+
+
+    .three-faces-contain{
+
+      flex: 0 0 45%;
+
+      padding-left: 0;
+      padding-right: 40px;
+
+      h4{
+        margin-top: 25px;
+        font-size: 32px;
+      }
+
+      p{
+        font-size: 15px;
+      }
+
+      .btn{
+        margin-top: 55px;
+        padding: 9.60px 1.40rem;
+      }
+
+    } // Closing three faces contain
+
+
+  } // Closing Tablet Breakpoint
+
+
+  @media(min-width: $breakpoint-x-large){
+    .container{
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .row{
+      margin: 0;
+    }
+
+    .computer-contain{
+      &::before{
+        height: 95%;
+        left: -40px;
+      }
+
+      h4{
+        margin-top: 43px;
+        margin-bottom: 25px;
+      }
+    }
+
+    .three-faces-contain{
+      margin-right: auto;
+      padding-right: 0;
+      padding-left: 1px;
+    }
+  }
+
+
+} // Closing Half Section
+
+
+
+/*************************
+     Comparison Section
+**************************/
+
+.comparison-section{
+background-color: $background-grey;
+padding-top: 50px;
+
+.container{
+  padding: 0 27px;
+}
+
+  h4{
+    @include h4;
+  }
+
+  // Modal Form
+
+  .modal-signup{
+    width: 302px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+
+
+    .container{
+      border: none;
+      padding: 0;
+    }
+
+    .row{
+      margin: 0;
+      text-align: left;
+      justify-content: center;
+
+
+     }
+
+    .form-contain{
+      padding: 0;
+    }
+
+    input{
+      margin-bottom: 20px;
+    }
+
+    .btn-green{
+      @include btn-green{
+      background-color: $button-background;
+      color: white;
+      }
+    }
+  }
+
+    @media(min-width: $breakpoint-tablet-md){
+      .modal-signup{
+        width: 85%;
+      }
+    }
+
+
+} // Closing Comparison Section
