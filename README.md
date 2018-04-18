@@ -1,3 +1,3 @@
 ## Ramaasservices
 
-This repo is a the website I created for learning purposes to check the website go to 
+This repo is a website which I created for an educational purpose to engage students into storing information through phones.
