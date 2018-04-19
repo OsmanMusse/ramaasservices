@@ -2,4 +2,5 @@
 
 
 Just testing something new out!!!
-Checkout my Treehouse profile 
+
+Just learning about merge conflict on the new_Feature branch!!!
