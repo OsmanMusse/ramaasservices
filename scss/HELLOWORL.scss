@@ -1,0 +1,2136 @@
+  // Partial imports
+ @import 'variables';
+ @import 'jumbotrons';
+ @import 'main-content';
+ @import 'mixins';
+ @import 'color-functions';
+ @import 'reset';
+
+
+
+/************************
+       SASS Mixins
+***************************/
+
+
+@mixin navContain{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100000;
+  padding: 20px 0;
+  background-color: rgba(107, 190, 152, 0.9);
+}
+
+@mixin iconCircle{
+  content: '';
+  position: absolute;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+@mixin text-contain-laptop{
+  padding: 0;
+  padding-bottom: 18px;
+}
+
+
+
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  margin:0px;
+
+}
+ul{
+  list-style: none;
+
+}
+
+li{
+  text-decoration: none;
+
+}
+
+
+.sticky-wrapper{
+  // Eliminates the unwanted white height given my the plugin
+  max-height: 0;
+}
+
+/** Navigation **/
+
+.navigation{
+@include navContain;
+
+}
+
+.school-year{
+color: red;
+}
+
+
+
+
+
+.my-container{
+  position: relative;
+  border-bottom: 2px solid white;
+  padding-bottom: 20px;
+}
+
+.nav-parent{
+display: flex;
+}
+
+.nav-child{
+  display: flex;
+  line-height: 39px;
+  font-size: 15px;
+  width: 100%;
+  border: 2px solid red;
+}
+
+.nav-child a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-child li {
+margin-right: 23px;
+list-style: none;
+}
+
+.nav-child a:hover{
+  opacity: 0.85;
+}
+
+.nav-child img {
+  margin-right: 12px;
+}
+
+.second-nav-child{
+  display: flex;
+  list-style: none;
+}
+
+.second-nav-child li{
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 14px;
+  align-self: center;
+  margin-right: 22px;
+}
+
+
+
+.second-nav-child a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+.btn-custom{
+  border: 2px solid white;
+  border-radius:4px;
+  background: inherit;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 100;
+  padding: 10px 11px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-custom:hover{
+  background: #fff;
+}
+
+.btn-custom a:hover{
+  color:#6bbe98;
+}
+
+
+
+
+ .oi-person{
+  color: #fff;
+}
+
+
+
+.oi-caret-bottom{
+position: relative;
+font-size: 10px;
+
+}
+
+.dropdown-menu{
+  left: 1112px;
+}
+
+a.dropdown-item{
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+.dropdown-toggle::after{
+  display: none;
+}
+
+
+/** Sticky Navigation  **/
+
+.is-sticky div{
+  z-index: 10000;
+}
+
+/** Main Section **/
+
+.main-section{
+  background-color: #f1f3f3;
+  width: 100%;
+  padding-top: 40px;
+
+}
+
+.inner-section{
+
+  height: 100%;
+  padding-top: 66px;
+
+
+
+}
+
+.container{
+
+text-align: center;
+margin: 0 auto;
+}
+
+
+.container > h1{
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.container > p{
+  font-weight: 100;
+  margin-bottom: 55px;
+  color: #7e8a94;
+}
+
+.instructions{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.instruction {
+
+}
+
+.instruction-image {
+  margin-right: -32px;
+}
+
+
+
+.instruction p {
+  color: #7e8a94;
+
+}
+
+/** Second Section **/
+.second-content{
+  text-align: center;
+  padding: 100px 0;
+}
+
+.second-content > h1{
+font-weight: 300;
+margin-bottom: 4rem;
+}
+.col-sm-6{
+  color: #7d8a94;
+  padding-bottom: 40px;
+}
+
+.col-sm-6 h2{
+  text-align: left;
+  font-weight: 300;
+}
+
+.col-sm-6 ul{
+padding: 0;
+text-align: left;
+}
+
+.col-sm-6 li {
+  font-size: 14px;
+  padding-left:1em;
+}
+
+
+.col-sm-6 li:before{
+  content: "•";
+  font-size: 14px;
+  position: absolute;
+  left: 19px;
+
+}
+
+
+
+
+/** Sign Up Form **/
+
+.form-sign-up{
+  padding: 100px 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.form-sign-up h3{
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+
+.form-sign-up button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 22px;
+  padding: 0.675rem 4rem;
+  font-weight: 100;
+  background-color: #6bbe98;
+  border-color: #6bbe98;
+  cursor: pointer;
+}
+
+.form-sign-up button:hover{
+  background-color:#4f8c70;
+  border-color: #4f8c70;
+}
+
+.form-sign-up{
+  border-color: #BABFBF;
+
+}
+
+.form-sign-up .container > p {
+  width: 47%;
+  margin: 0 auto 40px;
+  font-size: 15px;
+}
+
+.form-sign-up{
+  width: 60%;
+  margin: 0 auto;
+
+}
+
+.form-control{
+  font-size: 22px;
+}
+
+
+.oi-magnifying-glass {
+  position: absolute;
+  top: 50px;
+  right: 27px;
+}
+
+textarea{
+  height: 178px;
+}
+
+ .button-Submit a {
+   font-size: 14px;
+ }
+
+
+
+form .row .col-sm-6   {
+  padding-bottom: 1.5em;
+}
+label{
+  color: #686B71;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+
+/** @@@ Changes the colors when error **/
+.inputRed{
+  border-color: red;
+}
+
+.labelRed{
+  color: red;
+}
+
+.magnifyingIconRed{
+  color: red;
+}
+
+
+
+/** Second Section Buttons **/
+.btn-lg{
+  padding: .6rem 2.5rem;
+  font-weight: 300;
+  color:rgb(207, 211, 211);
+}
+
+
+
+/** Third Section **/
+.third-content{
+  background-color: #f1f3f3;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.third-content h1 {
+  color: #565a5f;
+}
+
+
+.third-content-description{
+width: 750px;
+margin: 0 auto;
+font-weight: 200;
+color: #7e8a94;
+}
+
+.third-content-text {
+  font-weight: 600;
+
+}
+
+.third-content a {
+text-decoration: none;
+color: inherit;
+}
+
+.third-content h1{
+  font-weight: 300;
+}
+
+.career-cycles{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.career-cycle{
+  margin-top: 40px;
+}
+
+.career-cycles h1{
+margin-top: 0.6em;
+font-size: 30px;
+}
+
+.arrow-visible::before{
+  content: "";
+  background: url('A13-Arrow-Gray-Right.png');
+  background-repeat: no-repeat;
+  background-size: 100% 88%;
+  width: 205px;
+  height: 54px;
+  position: absolute;
+  left: 79%;
+  top: 28%;
+}
+
+
+
+.orientation-description{
+  color:  #7e8a94;
+  width: 270px;
+  margin: 0 auto;
+}
+
+
+/** Four-Content **/
+.four-content{
+  background-image: url('https://cdn.involvio.com/assets/marketing/hero-dark-xl-650db47c20daa0bc77e46e0c4e3944f9.jpg');
+  background-size: cover;
+  padding: 100px 0;
+  text-align: center;
+
+}
+
+.four-content h1 {
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 60px;
+}
+
+
+/** Carousel **/
+
+.owl-carousel{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
+.owl-carousel .owl-item img {
+  width: 59%;
+  margin: 0 auto;
+}
+
+.owl-carousel .owl-stage {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+
+
+
+
+
+.owl-dots{
+  margin-right: -7px;
+  margin-top: 24px;
+}
+
+
+
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background-color: #fff;
+}
+ .owl-controls .owl-page, body.marketing .owl-controls .owl-buttons div{
+
+background-color: rgba(0,0,0,0.3);
+
+}
+
+
+
+/** Modal Section  **/
+
+.my-modal {
+  background: black;
+}
+
+
+
+
+/** Footer Section **/
+
+footer{
+  background-color: #6bbe98;
+  color: #fff;
+
+}
+
+.first-footer{
+  height:417px;
+  text-align: center;
+  padding: 84px 0 200px;
+  background-image:url('https://cdn.involvio.com/assets/marketing/landscape@2x-beef907dab2aacf5fedfc7ed0f3a8b33.png');
+  background-size: 88% 40%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+}
+
+.first-footer h1 {
+  color: #fff;
+  font-weight: 300;
+}
+
+
+.wrapper{
+  width: 88%;
+  margin: 0 auto;
+
+}
+
+.second-footer{
+padding: 30px 0;
+background-color: #4f8c70;
+}
+
+.social-nav {
+  width: 88%;
+  margin:0 auto;
+  display: flex;
+
+
+}
+
+.social-nav a {
+  color: #fff;
+}
+
+.social-nav a:hover{
+  text-decoration: none;
+}
+
+
+
+.first-nav{
+display: flex;
+padding: 0;
+}
+
+.first-nav li {
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.second-nav{
+  display: flex;
+
+}
+
+
+.second-nav li {
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+
+.about-description{
+  width: 88%;
+  margin: 0 auto;
+
+
+}
+
+
+
+.about-description p {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+
+.bottom-border-footer{
+  border-color: #70a089;
+  width: 100%;
+}
+
+
+
+
+
+
+/** Footer Buttons **/
+
+.btn-outline-secondary {
+color: #fff;
+background-color: transparent;
+background-image: none;
+border-color: #CFD3D3;
+font-weight: 200;
+margin-left: 9px;
+margin-right: 9px;
+padding: 0.675rem 3.75rem;
+font-size: 0.87rem;
+}
+
+.btn-outline-secondary:hover{
+color: #6abf97;
+background-color: #fff;
+border-color: inherit;
+
+}
+
+.button-link{
+
+}
+
+
+
+/** Orientation Page **/
+
+
+.navigation-orientation{
+
+
+
+}
+
+.orientation-container{
+border-bottom: none;
+padding-bottom: 0px;
+}
+
+.jumbotron {
+  background-image: url("https://cdn.involvio.com/assets/marketing/hero-orientation-4186274a842dd1ff587fd21ea03a41dc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 70px 0;
+  margin-bottom: 0;
+}
+
+.jumbotron h1 {
+  width: 54%;
+  margin: 0 auto;
+  font-size: 46px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.intro-orienatation {
+  background: #f1f3f3;
+  padding: 100px 0;
+}
+
+.intro-orienatation h1{
+font-size: 2.6rem;
+margin-bottom: 34px;
+}
+
+.intro-orienatation p {
+color:#7e8a94;
+font-size: 17px;
+max-width: 640px;
+margin: 0 auto;
+}
+
+.intro-orienatation img {
+  margin-top: 72px;
+}
+
+ .small-devices{
+   display: none;
+ }
+
+.guides-Tracks{
+
+position: relative;
+}
+
+
+
+.guides-Tracks .container{
+  /* border: 2px solid blue; */
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 143px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.first-column{
+  /* border: 2px solid orange; */
+  padding-left: 0;
+}
+
+.guides-Tracks::before{
+  content: " ";
+  display: block;
+  background: #cbcfcf;
+  width: 2px;
+  height: 102%;
+  position: absolute;
+  left: 50%;
+
+}
+
+.first-column h1 {
+  position: relative;
+  text-align: right;
+  font-weight: 300;
+  margin-bottom: 2.4rem;
+  color:rgba(107,190,152,0.9);
+}
+
+.first-column p {
+  width: 100%;
+  text-align: right;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  font-weight: 200;
+  color:#7e8a94;
+  padding-bottom: 25%;
+}
+
+.inner-column{
+  /* border: 2px solid red; */
+  width: 430px;
+  margin: 0 auto;
+}
+
+.inner-column h1 {
+  position: relative;
+}
+
+
+.icon-spaceship{
+display:none;
+/* position: absolute;
+width: 30px;
+height: 33px;
+right: 33px;
+top: 8px; */
+}
+
+.second-column{
+  /* border: 2px solid purple; */
+}
+
+.guides-Tracks .phone{
+  margin-top: -113px;
+  padding-left: 20px;
+}
+
+
+/* Third Content*/
+
+.agenda-Directions{
+  position: relative;
+background-color: #f1f3f3;
+padding-top: 120px;
+padding-bottom: 0;
+padding-left: 170px;
+padding-right: 120px;
+
+}
+
+.agenda-Directions::before{
+      content: " ";
+      display: block;
+      background: #cbcfcf;
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      margin-left: -1px;
+      z-index:3;
+  }
+
+
+
+.column1 {
+  /* border: 2px solid blue; */
+  padding-bottom: 0;
+
+}
+
+.agenda-Directions .phone {
+  max-width: 92%;
+}
+
+
+
+.column2{
+    /* border: 2px solid red; */
+}
+
+.column2 h1 {
+  font-weight: 300;
+  font-size: 38px;
+  color: rgba(107,190,152,0.9);
+  margin-bottom: 45px;
+  text-align: left;
+}
+
+.column2 p {
+  font-weight: 200;
+  font-size: 18px;
+  color: #7e8a94;
+  width: 75%;
+  text-align: left;
+}
+
+.column-contain{
+  position: relative;
+padding-left: 50px;
+/* border: 2px solid blue; */
+}
+
+
+.icon-calendar{
+  border: 2px solid #cbcfcf;
+      border-radius: 50%;
+      background: #f1f3f3;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      right: 102%;
+      bottom: 77%;
+      z-index: 3;
+}
+
+.calendar{
+margin-top: 9px;
+}
+
+/** Four-Content  **/
+
+.communication-Resources{
+  position: relative;
+  padding-top: 140px;
+  padding-bottom: 0;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+
+.four-column h1 {
+  font-weight: 300;
+  font-size: 38px;
+  color: rgba(107,190,152,0.9);
+  margin-bottom: 45px;
+  text-align: right;
+}
+
+.four-column p {
+  font-weight: 200;
+  font-size: 18px;
+  color: #7e8a94;
+  width: 100%;
+  text-align: right;
+}
+
+.icon-calendar2{
+  border: 2px solid #cbcfcf;
+  border-radius: 50%;
+  background: #ffffff;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  z-index: 3;
+  top: 50;
+  left: 114%;
+}
+.four-column{
+  /* position: relative;
+  border: 2px solid red; */
+}
+
+ .column-contain{
+  padding-left: 50px;
+/* border: 2px solid blue; */
+}
+
+.five-column{
+  padding-bottom: 0;
+  /* border: 2px solid purple; */
+}
+
+.second-phone{
+  margin-top:20px;
+  max-width: 100%;
+}
+
+
+.communication-Resources::before{
+      content: " ";
+      display: block;
+      background: #cbcfcf;
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      margin-left: -1px;
+      z-index: 3;
+  }
+
+.orientation-suite{
+  padding:70px 70px;
+  background-color: #f1f3f3;
+
+
+}
+
+.orientation-suite h1 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.orientation-suite p {
+  /* margin-bottom: 0; */
+  text-align: center;
+}
+
+
+.icon-contain h4 {
+font-size: 17px;
+font-weight: 200;
+color: #635555;
+}
+
+/** Sixth Section **/
+
+.sixth-section{
+padding-top: 85px;
+padding-left: 80px;
+padding-right: 85px;
+padding-bottom: 85px;
+}
+
+.sixth-section h1{
+  font-weight: 300;
+  font-size: 33px;
+  color: #5B5F63;
+
+}
+
+.sixth-section p {
+  font-size: 16px;
+  font-weight:200;
+  color: #7e8a94;
+}
+
+.sixth-section .row {
+  position:relative;
+}
+
+.sixth-section .row::before{
+  content: '';
+  border: 1px solid #F1F3F3;
+  display: block;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+
+}
+
+.three-faces{
+  margin-bottom: 60px;
+}
+
+.custom-btn{
+  padding: 0.450rem 1.95rem;
+}
+
+.icon-contain p {
+  font-size: 14px;
+  font-weight: 100;
+  color: #7e8a94;
+}
+
+.icon-contain
+
+.laptop{
+  margin-bottom: 55px;
+}
+
+.p-space{
+  margin-bottom: 72px;
+}
+
+/** Seventh Section **/
+
+.seventh-section{
+  background-color: #f1f3f3;
+  width: 100%;
+  padding: 80px;
+  /* background-image: url("https://ak6.picdn.net/shutterstock/videos/20007376/thumb/1.jpg");
+  background-repeat: no-repeat;
+  background-color: #f1f3f3;
+  background-size: contain;
+  background-position: bottom; */
+}
+
+.seventh-section .p-custom{
+  width: 57%;
+  margin: 0 auto;
+  font-size: 17px;
+
+
+}
+
+.outer-box{
+  /* border: 2px solid red; */
+  margin-top: 60px;
+  width: 1200px;
+  max-width: 100%;
+  padding-top: 85px;
+}
+
+.inner-box{
+  /* border: 2px solid blue; */
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 35px;
+  text-align: initial;
+  border-radius: 5px;
+
+  background-color: white;
+}
+
+.inner-box h1{
+  font-weight: 300;
+  text-align: center;
+}
+
+.inner-wrap{
+  /* border: 2px solid purple; */
+
+}
+
+.inner-btn{
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.inner-btn{
+  background-color: #6bbe98;
+  border-color: #6bbe98;
+  font-weight: lighter;
+}
+
+.inner-btn:hover{
+  background-color: #4f8c70;
+  border-color: #4f8c70;
+
+}
+
+/** Orientaiton Form **/
+
+.orientation-form{
+
+}
+
+.orientation-form input{
+border: 2.49px solid  #BABFBF;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************
+       Mobile Version
+****************************/
+
+@media (max-width:576px){
+  /** Navigation Menu Continue Tommorrow  **/
+
+  /** Navigation Menu First Page **/
+
+  .navigation{
+
+    padding: 20px 0;
+  .my-container{
+    border: 0;
+    padding-bottom: 0;
+  }
+  }
+
+
+.navigation-orientation{
+
+
+}
+
+/** Jumbotron Section **/
+
+.jumbotron h1 {
+margin: 0;
+width: 100%;
+font-size: 33px;
+}
+
+.jumbotron img {
+  display: none;
+}
+
+ .small-devices {
+
+display: block;
+}
+
+.img-show{
+display: flex;
+flex: 0 0 50%;
+}
+
+
+
+.large-devices{
+  display: none;
+}
+  /** First Section  **/
+.guides-Tracks .container{
+  /* border: 2px solid blue; */
+}
+
+.second-column{
+  padding: 0 23px;
+}
+
+.first-phone{
+  /* border: 2px solid red; */
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+.inner-column{
+  /* border: 2px solid red; */
+  padding-left: 10px;
+  margin-left: 0px !important;
+}
+
+
+.inner-column::before{
+  content: '';
+  width: 13%;
+  height: 15%;
+  position: absolute;
+  left: 260px;
+  top: 28px;
+  background-image: url('https://cdn.involvio.com/assets/marketing/icon-orientation-806a78b8e6c245aaa7d7424281f7f439.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.communication-Resources{
+  padding-top: 0 !important;
+}
+
+.four-column{
+  /* border: 2px solid red; */
+}
+
+.column-contain{
+  padding-left: 14px !important;
+  /* border: 2px solid blue; */
+}
+
+
+.header-title h1 {
+  margin-left: 10px !important;
+
+}
+
+.calendar-contain{
+  margin-right: 10px;
+}
+
+.column-contain h1{
+  font-size: 26px !important;
+  margin-bottom: 30px !important;
+  margin-left: 0 !important;
+}
+
+
+
+.icon-calendar2{
+  left: 10 !important;
+  top: 52px !important;
+}
+
+.second-phone{
+  flex: 0 0 95%;
+  max-width: 95%;
+}
+
+
+  /** Second Section **/
+
+
+
+  /** Third Section **/
+  .third-content-description{
+    width: 100%;
+  }
+    /** Orientation Jumbotron **/
+  .intro-orienatation h1 {
+    font-size: 1.8rem;
+}
+
+
+
+.orientation-suite .container h1{
+  font-size: 1.7rem;
+}
+
+.orientation-suite .icon-contain .text-contain p{
+  width: 60%;
+  margin: 0 auto 30px;
+}
+
+.sixth-section .row{
+flex-direction: column-reverse;
+}
+
+.sixth-section{
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-bottom: 0;
+}
+
+.sixth-section .container{
+
+}
+
+.sixth-section .row::before{
+  display: none;
+}
+
+.sixth-section .col-12{
+  /* border: 2px solid blue; */
+  padding-left: 10;
+  padding-right: 10;
+}
+
+.sixth-section .text-sixth h1{
+font-size: 27px;
+margin:20px 0;
+}
+
+.sixth-section .p-space{
+  margin-bottom: 35px;
+}
+
+.sixth-section .custom-btn{
+  padding: 0.55rem 2.3rem;
+  color: #6bbe98;
+  border-width: 2px;
+  border-color: #6bbe98;
+}
+
+.sixth-section .custom-btn:hover{
+  color: #fff;
+  background: #6bbe98;
+}
+
+
+.laptop-contain{
+  /* border: 2px solid red; */
+}
+
+
+
+.laptop-contain .col-12{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sixth-section h1 {
+  font-size: 23px;
+  font-weight: 200;
+  margin-bottom: 22px;
+}
+
+.laptop{
+  margin-bottom: 60px;
+}
+
+
+ .laptop-column {
+flex: 0 0 100%;
+ padding: 0;
+
+}
+
+
+
+div.three-faces-column.col-12{
+  border: 2px solid blue;
+  padding:0;
+}
+
+.text-sixth p{
+  width: 124%;
+margin-left: -36px;
+margin-bottom: 25px;
+}
+
+.main-sixth-column{
+  flex: 0 0 100%;
+}
+
+/* Seventh-Section  */
+
+.seventh-section{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 40px;
+}
+
+.seventh-section{
+
+}
+
+.seventh-section .h1-custom{
+  font-weight: 300;
+  font-size: 1.75rem;
+}
+
+
+.outer-box{
+  padding-top: 20px;
+}
+
+
+
+
+.inner-box{
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 25px;
+}
+
+
+.seventh-section .inner-wrap h1 {
+font-size:1.8rem;
+font-weight: 300;
+color: #565555;
+}
+
+.seventh-section .form-group {
+flex: 0 0 75%;
+max-width: 75%;
+margin: 0 auto 20px;
+}
+
+.seventh-section label{
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.oi-magnifying-glass{
+  top: 46px;
+}
+
+/** Footer  **/
+
+footer{
+  .wrapper{
+    display: none;
+  }
+}
+
+
+}
+
+
+
+
+
+
+@media(min-width: 576px){
+  .text-contain{
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
+/****************************
+      Tablet Version
+****************************/
+
+
+@media(max-width:767px){
+ .first-column{
+  padding-left: 15px;
+  }
+
+  .inner-column{
+    width: 100%;
+    margin-left: 38px;
+    /* border: 2px solid red; */
+  }
+
+  .inner-column h1{
+    text-align: left;
+    margin-top: 32px;
+    font-weight: 200;
+    font-size: 2.0rem;
+    color: #000;
+  }
+
+
+  .inner-column p {
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    padding: 0;
+  }
+
+
+
+
+
+.guides-Tracks::before{
+  display: none;
+}
+
+.agenda-Directions{
+
+  padding-top: 50px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.agenda-Directions::before{
+  display: none;
+}
+
+.agenda-Directions .container{
+  /* border: 2px solid red; */
+    max-width: 676px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+.agenda-Directions .column1{
+  /* border: 2px solid purple; */
+}
+
+.agenda-Directions .phone{
+
+}
+
+.agenda-Directions .column2{
+  /* border: 2px solid green; */
+}
+
+.agenda-Directions .container .row {
+  flex-direction: column-reverse;
+}
+
+
+.phone-contain{
+  display: flex;
+  justify-content: center;
+  /* height: 100%; */
+
+}
+
+.column1{
+  padding: 0;
+  }
+
+.column2{
+  /* flex: */
+}
+
+.column-contain {
+  padding-left: 0;
+}
+
+.column-contain h1 {
+  color: #000;
+  font-weight: 200;
+  font-size: 29px;
+  margin-bottom: 37px;
+}
+
+.column-contain p {
+  width: 100%;
+  font-size: 16px;
+}
+
+
+.header-container{
+
+  position: relative;
+}
+
+.icon-calendar{
+border: none;
+background: none;
+margin: 0;
+padding: 0;
+left: 238px;
+top: 1px;
+}
+
+.calendar{
+  margin-top: 0;
+}
+
+
+.column2 {
+  flex: 0 1 auto;
+  padding-bottom: 35px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+
+
+
+.guides-Tracks .container{
+  max-width: 100%;
+  padding: 0;
+}
+
+  .guides-Tracks::before{
+    display: none;
+}
+
+ .guides-Tracks .phone{
+width: 100%;
+margin-top: 0;
+padding-left: 0;
+
+ }
+
+
+ .communication-Resources{
+padding-top: 45px;
+padding-left: 0;
+padding-right: 0;
+}
+
+.communication-Resources .container{
+  /* border: 2px solid red; */
+   max-width: 676px;
+}
+
+.communication-Resources h1 {
+text-align: left;
+margin-left: 41px;
+}
+
+.communication-Resources p {
+  text-align: left;
+
+}
+
+
+ .communication-Resources::before{
+   display: none;
+ }
+
+ .icon-calendar2{
+  border: 0;
+ background-color: inherit;
+  left: 0px;
+  top:48px;
+  right: 1px;
+ }
+
+
+
+.orientation-suite {
+  padding-left: 0;
+  padding-right: 0;
+
+}
+
+ .orientation-suite h1 {
+  width: 100%;
+ }
+
+ .orientation-suite .container{
+  max-width: 640px;
+ }
+
+ .orientation-suite .col-sm-6{
+   /* border: 2px solid red; */
+   padding-bottom: 0;
+ }
+
+.orientation-suite .col-md-6{
+padding-bottom: 0;
+}
+
+
+
+
+
+ .text-contain{
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .text-contain p {
+    font-size: 14px;
+  }
+
+
+  .seventh-section .p-custom{
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+
+  }
+
+
+.seventh-section h1:nth-child(2n+0){
+  background-color: red;
+}
+
+
+
+
+
+
+
+ } /* Closing of max-width: 767px Breakpoint*/
+
+@media (max-width:840px) {
+
+
+.arrow-visible:before{
+  display: none;
+}
+
+}
+
+
+
+/* Tablet Version and below */
+
+@media(min-width:767px){
+  .orientation-suite h1 {
+    font-size: 2.3rem;
+  }
+
+
+.img-show{
+  display: flex;
+}
+
+/**  Jumbotron  **/
+
+.jumbotron {
+  padding: 80px 0;
+}
+
+.jumbotron h1 {
+  width: 85%;
+  font-size: 40px;
+}
+
+
+/** Intro Orientation  **/
+
+.intro-orienatation h1{
+  color: #585A65;
+  font-size: 2.4rem;
+  margin-bottom: 45px;
+}
+
+.intro-orienatation p {
+  max-width: 665px;
+}
+
+/** Guides-Tracks **/
+
+.guides-Tracks .container{
+  padding-top: 90px;
+}
+
+
+.first-column{
+  position: relative;
+}
+
+.first-column::before{
+  @include iconCircle;
+  width: 55px;
+  height: 55px;
+  border-color: #79c4a2;
+  left: 92.7%;
+  background-image: url('https://cdn.involvio.com/assets/marketing/icon-orientation-806a78b8e6c245aaa7d7424281f7f439.svg');
+  background-color: #fff;
+}
+
+.inner-column{
+  padding: 0;
+}
+
+.inner-column h1 {
+  font-size: 2.3rem;
+  text-align: center;
+}
+
+.inner-column p {
+  font-size: 18px;
+  width: 87%;
+}
+
+.second-column .phone{
+  margin-top: -20px;
+}
+
+.guides-Tracks .col-sm-6{
+  padding-bottom: 0;
+}
+
+
+/** Agenda-Directions **/
+
+.agenda-Directions{
+  padding-top: 55px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 0;
+}
+
+.agenda-Directions .row{
+
+}
+
+.agenda-Directions .icon-calendar{
+  right: 95%;
+}
+
+.agenda-Directions .icon-calendar .calendar {
+  margin-top: 12px;
+}
+
+.agenda-Directions .column1{
+  padding-right: 30px;
+  padding-left: 0;
+
+}
+
+.agenda-Directions .phone{
+max-width: 97%;
+margin-top: 25px;
+}
+
+
+
+.column2{
+
+}
+
+
+.column-contain{
+  padding: 30px;
+  padding-right: 20px;
+  padding-top: 0;
+  margin-top: 55px;
+}
+
+.column-contain p {
+  width: 100%;
+}
+
+
+.header-container h1 {
+  line-height: 1.5em;
+}
+
+/** Communication-Resources  **/
+
+
+.communication-Resources{
+  padding: 0;
+
+}
+
+.four-column::before{
+  @include iconCircle;
+  width: 55px;
+  height: 55px;
+  border-color: #79c4a2;
+  top: 15%;
+  left: 92.7%;
+  background-image: url('https://cdn.involvio.com/assets/marketing/icon-events-ffeccb910ae7a4d5a3e36b50fbf22221.svg');
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.calendar-contain{
+  display: none;
+}
+
+.phone-contains .second-phone {
+  margin-top: 32px;
+}
+
+.column-contain p{
+  width: 95%;
+}
+
+
+/** Orientation Suite **/
+
+
+.custom-orientation{
+  font-size: 18px;
+}
+
+/** Sixth Section **/
+
+
+.sixth-section{
+padding: 100 0;
+}
+
+.seventh-section {
+  padding: 0;
+  padding-top: 70px;
+}
+
+
+.seventh-section .p-custom{
+  width: 95%;
+}
+
+.sixth-section h1{
+  font-weight: 400;
+}
+
+
+.laptop-column{
+padding: 0 21px;
+}
+
+
+.laptop-column h1 {
+  font-size: 29px;
+  margin-bottom: 16px;
+}
+
+
+
+.laptop-contain{
+  margin: 0 auto 65px;
+}
+
+
+/** Orientation Suite  **/
+
+
+
+
+
+
+} /* Closing Tablets above Media Querie  */
+
+
+
+/****************************
+    Laptop Version
+****************************/
+
+@media(min-width:992px){
+
+
+  .icon-contain{
+
+  }
+
+.icon-contain h4{
+  font-size: 16px;
+
+}
+
+  .text-contain{
+
+     padding-left: 0;
+     padding-right: 0;
+   }
+
+   /** Guides-Tracks **/
+
+   .guides-Tracks .container{
+   padding-top: 183px;
+   }
+
+   .guides-Tracks::before{
+     left: 49.9%;
+   }
+
+   .first-column{
+
+      &::before{
+        @include iconCircle;
+        left: 94.5%;
+
+      }
+     .inner-column h1{
+       text-align: right;
+     }
+
+   .inner-column p{
+     width: 97%;
+     margin-left: 10px;
+   }
+
+   }
+
+   .second-column{
+     flex: 0 0 35.33333%;
+     max-width: 35.333333%;
+     padding: 30px 0 0;
+     margin-left: 4.333333%;
+     .phone{
+       margin-left: 22px;
+       margin-top: -115px;
+     }
+   }
+
+/** Agenda-Directions **/
+
+.agenda-Directions .row::before{
+  @include iconCircle;
+  width: 55px;
+  height: 55px;
+  border-color: #cccfcf;
+  left: 47.5%;
+  top: 32%;
+  background-image: url('https://cdn.involvio.com/assets/marketing/icon-agenda-7632b18137384022b9179b01328d6953.svg');
+  background-color: #f1f3f3;
+  z-index: 1000;
+
+}
+
+.column2{
+  margin-top:80px;
+  margin-left: 4.53333%;
+
+  .column-contain p{
+    width: 98%;
+  }
+  }
+
+
+.icon-calendar{
+  display: none;
+}
+
+
+
+/** Communication-Resources **/
+
+.communication-Resources{
+  padding-top: 120px;
+}
+
+.four-column {
+  .column-contain{
+    padding: 0;
+  }
+  .column-contain p {
+    width: 90%;
+    margin: 0 auto 0 40px;
+  }
+
+  .header-title h1{
+    line-height: 3.5rem;
+  }
+
+  &::before{
+
+    top: 15%;
+    left: 94.5%;
+  }
+} // Closing four-column //
+
+
+
+.five-column{
+  margin-top: -61px;
+  margin-left: 70px;
+}
+
+/** Orientation Suite **/
+
+.orientation-suite{
+
+  .custom-orientation{
+    width: 78%;
+ margin: 0 auto 55px;
+   }
+
+  .row{
+
+    .text-custom{
+      @include text-contain-laptop;
+    }
+  }
+} // Closing Orientation Suite //
+
+
+
+/** Sixth Section **/
+
+.sixth-section .container{
+padding: 0;
+}
+
+.main-sixth-column, .laptop-column{
+  h1{
+    font-weight: 300;
+    margin-bottom: 30px;
+
+  }
+  p{
+    margin-bottom: 55px;
+    font-size: 15px;
+  }
+
+  .custom-btn{
+    padding: 0.600rem 1.95rem;
+  }
+
+  .text-sixth{
+    padding: 0;
+    margin-right: 10px;
+  }
+
+}
+
+
+} // Closing Laptop Version //
+
+
+
+
+
+/****************************
+    Desktop Version
+****************************/
+
+
+@media(min-width:1200px){
+
+}
