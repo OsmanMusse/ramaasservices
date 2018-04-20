@@ -9,16 +9,6 @@
      Breakpoints
 ***************************/
 /************************
-     Jumbotron
-***************************/
-.jumbotron {
-  padding: 120px 0; }
-
-.school-year {
-  font-size: 550px;
-  color: red; }
-
-/************************
      Variables
 ***************************/
 /** Buttons **/
@@ -48,6 +38,54 @@
   color: white; }
   .navigation-hide .img-show {
     margin-right: 20px; }
+  .navigation-hide .left-side {
+    display: none; }
+    @media (max-width: 576px) {
+      .navigation-hide .left-side {
+        display: flex;
+        margin-left: auto; }
+        .navigation-hide .left-side .nav-burger {
+          color: #fff;
+          font-size: 27px;
+          font-weight: 200;
+          margin-bottom: 0;
+          margin: 1px auto 0 0;
+          cursor: pointer; }
+        .navigation-hide .left-side input[type=checkbox] {
+          display: none; }
+        .navigation-hide .left-side #toggle:checked + .navigation-hamburger {
+          display: block; }
+        .navigation-hide .left-side .navigation-hamburger {
+          display: none;
+          width: 100%;
+          height: 1000px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          background-color: rgba(39, 41, 43, 0.97); }
+          .navigation-hide .left-side .navigation-hamburger .menu .inner-wrapper {
+            display: flex;
+            width: 350px;
+            margin: 11px auto;
+            justify-content: space-between; }
+          .navigation-hide .left-side .navigation-hamburger .menu .nav-burger-close {
+            font-size: 30px; }
+          .navigation-hide .left-side .navigation-hamburger .menu .menu-link {
+            text-align: left;
+            font-weight: 100;
+            font-size: 17px;
+            padding: 0; }
+            .navigation-hide .left-side .navigation-hamburger .menu .menu-link a:hover {
+              color: white;
+              text-decoration: none; }
+            .navigation-hide .left-side .navigation-hamburger .menu .menu-link li {
+              border: 1px solid red;
+              padding: 5px 0px;
+              border-top-color: #434a4d;
+              border-bottom-color: #434a4d;
+              border-right-color: transparent;
+              border-left-color: transparent;
+              color: #fff; } }
   .navigation-hide .nav-child {
     flex: 0 0 50%;
     align-self: flex-end;
@@ -984,9 +1022,6 @@
 /************************
      Mixins
 ***************************/
-ul {
-  padding: 0; }
-
 /************************
        SASS Mixins
 ***************************/
@@ -1103,7 +1138,7 @@ a.dropdown-item {
 .main-section {
   background-color: #f1f3f3;
   width: 100%;
-  padding-top: 100px; }
+  padding-top: 40px; }
 
 .inner-section {
   height: 100%;
