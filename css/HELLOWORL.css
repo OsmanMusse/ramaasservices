@@ -63,7 +63,7 @@
           top: 0;
           left: 0;
           background-color: rgba(39, 41, 43, 0.97);
-          padding: 10px; }
+          padding: 5px; }
           .navigation-hide .left-side .navigation-hamburger .menu .inner-wrapper {
             display: flex;
             width: 350px;
@@ -1140,7 +1140,7 @@ a.dropdown-item {
 .main-section {
   background-color: #f1f3f3;
   width: 100%;
-  padding-top: 100px; }
+  padding-top: 40px; }
 
 .inner-section {
   height: 100%;
