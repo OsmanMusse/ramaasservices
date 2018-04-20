@@ -62,14 +62,16 @@
           position: fixed;
           top: 0;
           left: 0;
-          background-color: rgba(39, 41, 43, 0.97); }
+          background-color: rgba(39, 41, 43, 0.97);
+          padding: 10px; }
           .navigation-hide .left-side .navigation-hamburger .menu .inner-wrapper {
             display: flex;
             width: 350px;
             margin: 11px auto;
             justify-content: space-between; }
           .navigation-hide .left-side .navigation-hamburger .menu .nav-burger-close {
-            font-size: 30px; }
+            font-size: 38px;
+            margin-bottom: 0; }
           .navigation-hide .left-side .navigation-hamburger .menu .menu-link {
             text-align: left;
             font-weight: 100;
