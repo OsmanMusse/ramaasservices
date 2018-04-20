@@ -56,13 +56,13 @@
         top: 0;
         left: 0;
         background-color: rgba(39,41,43,0.97);
-        padding: 5px;
+        padding: 0px;
 
         .menu{
 
             .inner-wrapper{
               display: flex;
-              width: 350px;
+              width: 340px;
               margin: 11px auto;
               justify-content: space-between;
             }
@@ -70,13 +70,14 @@
             .nav-burger-close{
               font-size: 38px;
               margin-bottom: 0;
+              margin-right: 1px;
             }
 
             .menu-link{
               text-align: left;
               font-weight: 100;
               font-size: 17px;
-              padding: 0;
+              padding: 10px;
 
 
               a:hover{
